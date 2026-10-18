@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Propuesta Bodas de Oro · Escencia35</title>
+<meta name="description" content="Propuesta de fotografía y video para la celebración de bodas de oro. Escencia35 Studio Creativo.">
+<meta property="og:title" content="Propuesta Bodas de Oro · Escencia35">
+<meta property="og:description" content="Cincuenta años de historia, contados en imágenes.">
+<meta property="og:image" content="img/portada.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Montserrat:wght@400;500;700&display=swap">
+<style>
+  :root{
+    --ivory:#F7F3EC; --sand:#EFE8DC; --ink:#1E1B17; --body:#4A433A; --muted:#6B6257;
+    --gold:#7A5C2A; --gold-light:#D4B57E; --line:#CBBFAC; --on-dark:#DDD3C4; --muted-dark:#A89C8B;
+    --serif:'Cormorant Garamond', Georgia, serif; --sans:'Montserrat', Arial, sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--ivory);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+  img,video{display:block;max-width:100%}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  section{padding:112px 0}
+  .eyebrow{font-size:13px;font-weight:500;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:16px}
+  h1,h2,h3.serif{font-family:var(--serif);font-weight:500;line-height:1.08}
+  h2{font-size:clamp(36px,5vw,58px);margin-bottom:24px}
+  p.lead{font-size:18px;color:var(--body);max-width:60ch}
+  .dark{background:var(--ink);color:var(--ivory)}
+  .dark .eyebrow{color:var(--gold-light)}
+  .dark p.lead{color:var(--on-dark)}
+  .sand{background:var(--sand)}
+
+  /* Portada */
+  .hero{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;padding:0}
+  .hero-text{display:flex;flex-direction:column;justify-content:space-between;padding:56px 64px}
+  .brand{font-weight:700;letter-spacing:.3em;font-size:16px}
+  .brand small{display:block;font-weight:400;letter-spacing:.12em;color:var(--body);font-size:13px;margin-top:4px}
+  .hero h1{font-size:clamp(56px,8vw,112px);margin:8px 0 20px}
+  .hero .tagline{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.6vw,32px);color:var(--body);max-width:20ch}
+  .hero-meta{font-size:14px;color:var(--body)}
+  .hero-meta b{color:var(--ink);font-weight:500}
+  .hero img{width:100%;height:100%;object-fit:cover}
+
+  /* Nosotros */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+  .split img{width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:8px}
+  .names{margin-top:24px;font-weight:500}
+
+  /* Cards */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
+  .card{background:var(--ivory);border-radius:12px;padding:36px}
+  .num{font-family:var(--serif);font-size:56px;color:var(--gold);line-height:1}
+  .card h3{font-size:20px;font-weight:700;margin:16px 0 10px}
+  .card p{color:var(--body)}
+
+  /* Paquetes */
+  .plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px;align-items:stretch}
+  .plan{background:var(--sand);border-radius:12px;padding:36px;display:flex;flex-direction:column;gap:12px}
+  .plan .tag{font-size:12px;font-weight:500;letter-spacing:.2em;color:var(--gold)}
+  .plan h3{font-family:var(--serif);font-size:42px;font-weight:600;line-height:1}
+  .plan .price{font-size:30px;font-weight:700}
+  .plan hr{border:none;border-top:1px solid var(--line);margin:8px 0}
+  .plan ul{list-style:none;display:flex;flex-direction:column;gap:10px;color:var(--body)}
+  .plan li{padding-left:22px;position:relative}
+  .plan li::before{content:"";position:absolute;left:0;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--gold)}
+  .plan.featured{background:var(--ink);color:var(--ivory);box-shadow:0 20px 48px rgba(30,27,23,.28)}
+  .plan.featured ul{color:var(--on-dark)}
+  .plan.featured hr{border-top-color:#5A5147}
+  .plan.featured li::before{background:var(--gold-light)}
+  .pill{align-self:flex-start;background:var(--gold-light);color:var(--ink);font-size:12px;font-weight:700;letter-spacing:.2em;padding:6px 14px;border-radius:999px}
+  .note{margin-top:28px;font-size:14px;color:var(--muted)}
+
+  /* Portafolio */
+  .gallery{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:40px}
+  .gallery img{width:100%;aspect-ratio:16/8;object-fit:cover;border-radius:8px}
+
+  /* Video */
+  .video-grid{display:grid;grid-template-columns:5fr 7fr;gap:56px;align-items:center}
+  .video-grid video{width:100%;aspect-ratio:16/9;border-radius:8px;background:#000}
+
+  /* Adicionales */
+  table{width:100%;border-collapse:collapse;background:var(--ivory);border-radius:12px;overflow:hidden;margin-top:40px}
+  th,td{text-align:left;padding:18px 24px;border-bottom:1px solid var(--line)}
+  th{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  td:first-child{font-weight:500}
+  td:last-child,th:last-child{text-align:right;white-space:nowrap}
+  tr:last-child td{border-bottom:none}
+  td:nth-child(2){color:var(--body)}
+
+  /* Condiciones */
+  .terms{display:grid;grid-template-columns:repeat(3,1fr);gap:40px 48px;margin-top:48px}
+  .term{border-top:2px solid #B08D57;padding-top:18px}
+  .term h3{font-size:18px;font-weight:700;margin-bottom:8px}
+  .term p{color:var(--body)}
+
+  /* Cierre */
+  .closing{display:grid;grid-template-columns:1fr 1fr;min-height:90vh;padding:0}
+  .closing-text{display:flex;flex-direction:column;justify-content:center;gap:24px;padding:72px 64px}
+  .closing h2{font-size:clamp(48px,6vw,88px);margin:0}
+  .closing img{width:100%;height:100%;object-fit:cover}
+  .btn{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;background:var(--gold-light);color:var(--ink);text-decoration:none;font-weight:700;padding:16px 28px;border-radius:999px;transition:transform .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .contact{display:flex;flex-direction:column;gap:6px;color:var(--on-dark)}
+  .contact b{color:var(--ivory);font-weight:500}
+  .validity{font-size:14px;color:var(--muted-dark)}
+  footer{background:var(--ink);color:var(--muted-dark);text-align:center;font-size:13px;padding:24px;border-top:1px solid #34302A}
+
+  @media (max-width:860px){
+    section{padding:72px 0}
+    .hero,.closing{grid-template-columns:1fr}
+    .hero img,.closing img{height:56vh}
+    .hero-text,.closing-text{padding:40px 24px;gap:40px}
+    .hero{min-height:auto}
+    .split,.video-grid{grid-template-columns:1fr;gap:36px}
+    .cards,.plans,.terms{grid-template-columns:1fr}
+    .gallery{grid-template-columns:1fr}
+    th,td{padding:14px 12px;font-size:15px}
+    .closing img{order:-1}
+  }
+</style>
+</head>
+<body>
+
+<!-- 1. Portada -->
+<section class="hero">
+  <div class="hero-text">
+    <p class="brand">ESCENCIA35<small>Studio Creativo</small></p>
+    <div>
+      <p class="eyebrow">Propuesta de servicios</p>
+      <h1>Bodas de Oro</h1>
+      <p class="tagline">Cincuenta años de historia, contados en imágenes.</p>
+    </div>
+    <p class="hero-meta"><b>Fernando Henríquez · Sebastián Acuña</b><br>+56 9 5300 7902</p>
+  </div>
+  <img src="img/portada.jpg" alt="Pareja abrazada a contraluz durante una celebración nocturna">
+</section>
+
+<!-- 2. Nosotros -->
+<section>
+  <div class="wrap split">
+    <img src="img/nosotros.jpg" alt="Pareja frente a frente con un destello de luz" loading="lazy">
+    <div>
+      <p class="eyebrow">Quiénes somos</p>
+      <h2>Somos un equipo de creativos dedicados a capturar la esencia de cada momento.</h2>
+      <p class="lead">Fotografía y video con mirada cinematográfica: retratos honestos, luz cuidada y un relato que se disfruta hoy y se atesora por generaciones.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Enfoque -->
+<section class="sand">
+  <div class="wrap">
+    <p class="eyebrow">Nuestro enfoque</p>
+    <h2>Cómo contaremos su historia</h2>
+    <div class="cards">
+      <div class="card"><p class="num">01</p><h3>La pareja</h3><p>Retratos de los festejados, la renovación de votos y los gestos que solo cincuenta años de complicidad pueden dar.</p></div>
+      <div class="card"><p class="num">02</p><h3>La familia</h3><p>Retratos por generaciones: hijos, nietos y bisnietos junto a quienes empezaron todo.</p></div>
+      <div class="card"><p class="num">03</p><h3>La celebración</h3><p>El brindis, los discursos, la música y el baile, de principio a fin.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Paquetes -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Paquetes</p>
+    <h2>Elijan cómo quieren recordarlo</h2>
+    <div class="plans">
+      <div class="plan">
+        <p class="tag">FOTOGRAFÍA</p>
+        <h3>Esencial</h3>
+        <p class="price">$350.000</p>
+        <hr>
+        <ul>
+          <li>2 fotógrafos</li>
+          <li>Cobertura de hasta 6 horas</li>
+          <li>100 fotos editadas en alta resolución</li>
+          <li>Galería online para descargar y compartir</li>
+        </ul>
+      </div>
+      <div class="plan featured">
+        <p class="pill">MÁS ELEGIDO</p>
+        <h3>Celebración</h3>
+        <p class="price">$450.000</p>
+        <hr>
+        <ul>
+          <li>1 fotógrafo + 1 videógrafo</li>
+          <li>Cobertura de hasta 6 horas</li>
+          <li>100 fotos editadas en alta resolución</li>
+          <li>Video cinematográfico de 3 minutos</li>
+          <li>Galería online para descargar y compartir.</li>
+        </ul>
+      </div>
+      <div class="plan">
+        <p class="tag">FOTO + VIDEO + FAMILIA</p>
+        <h3>Legado</h3>
+        <p class="price">$590.000</p>
+        <hr>
+        <ul>
+          <li><b>Todo lo del paquete Celebración</b></li>
+          <li>150 fotos editadas</li>
+          <li>Reel vertical de 60 segundos para redes</li>
+          <li>1 video de mensajes de hijos y nietos (2 minutos máximo)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Portafolio -->
+<section class="sand">
+  <div class="wrap">
+    <p class="eyebrow">Portafolio</p>
+    <h2>Nuestro trabajo en celebraciones</h2>
+    <div class="gallery">
+      <img src="img/ceremonia-familia.jpg" alt="Ceremonia al aire libre con la familia de testigo" loading="lazy">
+      <img src="img/cantante.jpg" alt="Cantante sobre el escenario durante la fiesta" loading="lazy">
+      <img src="img/ceremonia-jardin.jpg" alt="Pareja de pie durante una ceremonia en un jardín" loading="lazy">
+      <img src="img/musico.jpg" alt="Músico tocando guitarra con luces de escenario" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- 6. Video -->
+<section class="dark">
+  <div class="wrap video-grid">
+    <div>
+      <p class="eyebrow">Video cinematográfico</p>
+      <h2>Un relato para volver a ver en cada aniversario</h2>
+      <p class="lead">Formato horizontal tipo cine, con música, color cuidado y las voces de la familia. Incluido en los paquetes Celebración y Legado.</p>
+      <p class="lead" style="margin-top:20px;text-decoration:underline;color:var(--ivory)">*Esta es una versión reducida del video principal de uno de nuestros clientes.</p>
+    </div>
+    <video controls playsinline preload="metadata" poster="img/video-portada.jpg">
+      <source src="video/video-muestra.mp4" type="video/mp4">
+      Tu navegador no puede reproducir este video.
+    </video>
+  </div>
+</section>
+
+<!-- 7. Adicionales -->
+<section class="sand">
+  <div class="wrap">
+    <p class="eyebrow">Adicionales</p>
+    <h2>Para hacerlo aún más suyo</h2>
+    <table>
+      <tr><th>Adicional</th><th>Descripción</th><th>Valor</th></tr>
+      <tr><td>Hora extra</td><td>Cobertura adicional por cada hora</td><td>$40.000</td></tr>
+      <tr><td>Foto de ayer y hoy</td><td>Recreamos su foto de matrimonio de hace 50 años</td><td>$80.000</td></tr>
+      <tr><td>Fotos de época</td><td>Digitalizamos sus fotos antiguas y las sumamos al video</td><td>$100.000</td></tr>
+    </table>
+    <p class="note" style="font-style:italic;font-size:16px;color:var(--body)">*Estos son servicios opcionales y no obligatorios. Se pueden sumar a cualquiera de los paquetes.</p>
+  </div>
+</section>
+
+<!-- 8. Condiciones -->
+<section>
+  <div class="wrap">
+    <p class="eyebrow">Condiciones del servicio</p>
+    <h2>Claridad desde el primer día</h2>
+    <div class="terms">
+      <div class="term"><h3>1. Reserva</h3><p>Firmamos un contrato simple con fecha, horario, lugar y servicios acordados.</p></div>
+      <div class="term"><h3>2. Abono del 50%</h3><p>Se paga al firmar el contrato y es lo que confirma la reserva de la fecha.</p></div>
+      <div class="term"><h3>3. Saldo del 50%</h3><p>Se paga antes de la entrega final del material. Pueden revisar que el material está listo para dar fe del correcto servicio.</p></div>
+      <div class="term"><h3>4. Entrega</h3><p>Todo el material se entrega por galería online descargable en un plazo máximo de 30 días desde el evento.</p></div>
+      <div class="term"><h3>5. Cambios y cancelación</h3><p>Una reprogramación sin costo con 15 días de aviso, sujeta a disponibilidad. Si se cancela, el abono no es reembolsable.</p></div>
+      <div class="term"><h3>6. Traslados</h3><p>Incluidos dentro de la Región Metropolitana. Fuera de ella se cotizan aparte.</p></div>
+    </div>
+    <p class="note" style="font-weight:700">Al contratar el servicio se aceptan estas condiciones.</p>
+  </div>
+</section>
+
+<!-- 9. Cierre -->
+<section class="dark closing">
+  <div class="closing-text">
+    <p class="eyebrow" style="margin:0">Siguiente paso</p>
+    <h2>Reservemos su fecha</h2>
+    <p class="lead">Escríbannos y conversemos cómo quieren celebrar estos 50 años.</p>
+    <a class="btn" href="https://wa.me/56953007902?text=Hola%2C%20vimos%20la%20propuesta%20de%20Bodas%20de%20Oro%20y%20queremos%20conversar." target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    <div class="contact">
+      <b>+56 9 5300 7902</b>
+      <span>estudioesencia35@gmail.com</span>
+    </div>
+    <p class="validity">Cotización emitida el 18 de octubre de 2026 · Válida por 15 días</p>
+  </div>
+  <img src="img/cierre.jpg" alt="Pareja tomada de la mano bajo un arco iluminado" loading="lazy">
+</section>
+
+<footer>ESCENCIA35 · Studio Creativo</footer>
+
+</body>
+</html>
