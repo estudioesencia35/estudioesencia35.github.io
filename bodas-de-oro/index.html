@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Propuesta Bodas de Oro · Escencia35</title>
-<meta name="description" content="Propuesta de fotografía y video para la celebración de bodas de oro. Escencia35 Studio Creativo.">
-<meta property="og:title" content="Propuesta Bodas de Oro · Escencia35">
+<title>Propuesta Bodas de Oro · Esencia35</title>
+<meta name="description" content="Propuesta de fotografía y video para la celebración de bodas de oro. Esencia35 Studio Creativo.">
+<meta property="og:title" content="Propuesta Bodas de Oro · Esencia35">
 <meta property="og:description" content="Cincuenta años de historia, contados en imágenes.">
 <meta property="og:image" content="img/portada.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,8 +19,8 @@
     --serif:'Cormorant Garamond', Georgia, serif; --sans:'Montserrat', Arial, sans-serif;
   }
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{background:var(--ivory);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{background:var(--ivory);color:var(--ink);font-family:var(--sans);line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
   img,video{display:block;max-width:100%}
   .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
   section{padding:112px 0}
@@ -36,13 +36,13 @@
   /* Portada */
   .hero{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;padding:0}
   .hero-text{display:flex;flex-direction:column;justify-content:space-between;padding:56px 64px}
-  .brand{font-weight:700;letter-spacing:.3em;font-size:16px}
-  .brand small{display:block;font-weight:400;letter-spacing:.12em;color:var(--body);font-size:13px;margin-top:4px}
+  .logo{height:44px;width:auto;max-width:100%;object-fit:contain;align-self:flex-start}
+  .closing .logo{height:40px}
   .hero h1{font-size:clamp(56px,8vw,112px);margin:8px 0 20px}
   .hero .tagline{font-family:var(--serif);font-style:italic;font-size:clamp(22px,2.6vw,32px);color:var(--body);max-width:20ch}
   .hero-meta{font-size:14px;color:var(--body)}
   .hero-meta b{color:var(--ink);font-weight:500}
-  .hero img{width:100%;height:100%;object-fit:cover}
+  .hero > img{width:100%;height:100%;object-fit:cover}
 
   /* Nosotros */
   .split{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
@@ -100,7 +100,7 @@
   .closing{display:grid;grid-template-columns:1fr 1fr;min-height:90vh;padding:0}
   .closing-text{display:flex;flex-direction:column;justify-content:center;gap:24px;padding:72px 64px}
   .closing h2{font-size:clamp(48px,6vw,88px);margin:0}
-  .closing img{width:100%;height:100%;object-fit:cover}
+  .closing > img{width:100%;height:100%;object-fit:cover}
   .btn{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;background:var(--gold-light);color:var(--ink);text-decoration:none;font-weight:700;padding:16px 28px;border-radius:999px;transition:transform .2s}
   .btn:hover{transform:translateY(-2px)}
   .contact{display:flex;flex-direction:column;gap:6px;color:var(--on-dark)}
@@ -111,14 +111,22 @@
   @media (max-width:860px){
     section{padding:72px 0}
     .hero,.closing{grid-template-columns:1fr}
-    .hero img,.closing img{height:56vh}
+    .hero > img,.closing > img{height:56vh}
     .hero-text,.closing-text{padding:40px 24px;gap:40px}
     .hero{min-height:auto}
     .split,.video-grid{grid-template-columns:1fr;gap:36px}
     .cards,.plans,.terms{grid-template-columns:1fr}
     .gallery{grid-template-columns:1fr}
-    th,td{padding:14px 12px;font-size:15px}
-    .closing img{order:-1}
+    table,tbody,tr,td{display:block;width:100%}
+    table{background:transparent;border-radius:0;overflow:visible}
+    tr:first-child{display:none}
+    tr{background:var(--ivory);border-radius:12px;padding:20px;margin-bottom:12px}
+    td{padding:0;border:none;text-align:left!important;white-space:normal!important}
+    td:first-child{font-size:17px;margin-bottom:4px}
+    td:nth-child(2){font-size:15px;margin-bottom:10px}
+    td:last-child{font-size:20px;font-weight:700;color:var(--gold)}
+    .eyebrow{letter-spacing:.24em}
+    .closing > img{order:-1}
   }
 </style>
 </head>
@@ -127,7 +135,7 @@
 <!-- 1. Portada -->
 <section class="hero">
   <div class="hero-text">
-    <p class="brand">ESCENCIA35<small>Studio Creativo</small></p>
+    <img class="logo" src="img/logo-oscuro.png" alt="Esencia35 Studio Creativo">
     <div>
       <p class="eyebrow">Propuesta de servicios</p>
       <h1>Bodas de Oro</h1>
@@ -275,6 +283,7 @@
 <!-- 9. Cierre -->
 <section class="dark closing">
   <div class="closing-text">
+    <img class="logo" src="img/logo-claro.png" alt="Esencia35 Studio Creativo" style="margin-bottom:24px">
     <p class="eyebrow" style="margin:0">Siguiente paso</p>
     <h2>Reservemos su fecha</h2>
     <p class="lead">Escríbannos y conversemos cómo quieren celebrar estos 50 años.</p>
@@ -288,7 +297,7 @@
   <img src="img/cierre.jpg" alt="Pareja tomada de la mano bajo un arco iluminado" loading="lazy">
 </section>
 
-<footer>ESCENCIA35 · Studio Creativo</footer>
+<footer>ESENCIA35 · Studio Creativo</footer>
 
 </body>
 </html>
